@@ -59,25 +59,38 @@
 ## ③ クラスの持ち物
 ### Expense（支出）
 - amount : int
-- 
-- 
+- category : Category
+- date : LocalDate
 
 ### SpecialExpense（特別支出）
-- 
+- amount : int
+- content : String
+- date : LocalDate
 
 ### FixedCost（固定費）
-- 
+- name : String
+- amount : int
+- dayOfMonth : int
 
 ### Budget（予算）
-- 
+- amount : int
+- yearMonth : YearMonth
 
 ### Kakeibo（家計簿）
-- 
+- expenses : List<Expense> 
+- specialExpenses : List<SpecialExpense>
+- fixedCosts : List<FixedCost>
+- budget : Budget
+- savings : int
 
 ### Category（項目・enum）
--
+- FOOD
+- DAILY
+- TRANSPORT
+- HOBBY
+
 ## ④ 特別支出の「内容」欄
-- 
+- 自由入力（String）。年に数回なので、種類で分けるより何に使ったかが分かるほうがよい
 
 ## 決まったこと（2026-11-15）
 - 項目別グラフはドーナツ型にする（輪1本を、食費・日用品・交通・趣味・まだ使っていない分の5つで区切る）
